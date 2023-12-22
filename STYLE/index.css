@@ -503,7 +503,23 @@ footer h2 {
   .tribox {
     flex-wrap: wrap;
   }
+}
+@media (width < 600px) {
   .contact {
     flex-wrap: wrap;
+  }
+  .menu {
+    z-index: 3;
+    bottom: 0px;
+    width: 100vw;
+    right: 50%;
+    margin-right: -50vw;
+    border-radius: 0;
+  }
+  .menu span {
+    padding: 0.4rem;
+  }
+  .fin {
+    height: 40px;
   }
 }/*# sourceMappingURL=index.css.map */
