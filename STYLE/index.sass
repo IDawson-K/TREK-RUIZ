@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap')  
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css")
+
+$creme: #F9EDEA
+$input: #E5CFC7
+$logo: #230A02
+    
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: Inter
+    color: $logo
+    transition: 0.4s
+
+h1
+    font-family: Inter
+
+body
+    background: $creme
+    overflow-x: hidden
+
+.menu
+    z-index: 1
+    display: flex
+    position: fixed
+    gap: 0.8rem
+    bottom: 1rem
+    width: 450px
+    right: 50%
+    margin-right: -225px
+    background: transparentize($input, 0.2)
+    backdrop-filter: blur(12px)
+    padding: 0.6rem
+    font-weight: 500
+    border-radius: 0.6rem
+    span
+        text-align: center
+        border: 1px solid transparentize($logo, 0.8)
+        border-radius: 0.34rem
+        padding: 0.6rem
+        flex-grow: 1
+        cursor: pointer
+        &:hover
+            border: 1px solid $logo
+
+nav
+    display: flex
+    align-items: center
+    margin: 1.2rem 1.6rem
+    .profil
+        height: 38px
+        border-radius: 999px
+        filter: grayscale(100%)
+        cursor: pointer
+        &:hover
+            filter: grayscale(0%)
+    .logo
+        height: 32px
+        &:hover
+            transform: scale(1.15)
+            filter: brightness(0)
+
+.searchbar
+    transform: scale(0.98)
+    display: flex
+    align-items: center
+    height: 46px
+    border: none
+    background: $input
+    border-radius: 0.6rem
+    width: 100%
+    margin: 0rem 1.4rem
+    padding: 0rem 1.4rem
+    &:hover
+        transform: scale(1)
+    img
+        height: 18px
+        cursor: pointer
+        &:hover
+            transform: scale(1.2)
+    input
+        padding: 0rem 1.4rem
+        border: none
+        width: 100%
+        height: 46px
+        background: none
+        &::placeholder
+            color: transparentize($logo, 0.6)
+        &:focus
+            outline: none
+            border: none
+
+header
+    margin: 2rem 0rem
+    div
+        text-align: center
+        font-family: Inter
+        font-size: 8vw
+        letter-spacing: 0.8vw
+        font-weight: 900
+    .marquee
+        margin-top: 1.4rem
+        overflow: hidden
+        display: flex
+        justify-content: flex-start
+        span
+            font-family: Inter
+            font-size: 2.3vw
+            font-weight: 500
+            white-space: nowrap
+            letter-spacing: 0.2rem
+            animation: marquee 14s linear infinite
+
+@keyframes marquee
+    0%
+        transform: translateX(0)
+    100%
+        transform: translateX(-100%)
+        
+.bentobox
+    display: flex
+    flex-direction: column
+    gap: 2vw
+    padding: 2vw 7vw
+
+.bibox
+    display: flex
+    gap: 10px
+    .box1, .box2
+        border-radius: 1.2rem
+        background: green
+        height: 40vw
+        flex-grow: 1
+        transform: scale(0.935)
+        cursor: pointer
+        &:hover
+            transform: scale(1)
+
+        .box-in
+            position: relative
+            h1
+                font-size: calc( 0.4rem + 3.6vw )
+                padding-left: calc( 0.6rem + 3vw )
+                padding-top: calc( 0.6rem + 3vw )
+                color: $creme
+            .text
+                font-size: calc( 0.5rem + 0.6vw )
+                font-weight: 500
+                padding-left: calc( 0.6rem + 3vw )
+                padding-top: 1vw
+                width: 36vw
+                color: $creme
+                line-height: calc( 0.6rem + 1.2vw )
+
+
+    .box1
+        &::before
+            content: ""
+            position: absolute
+            border-radius: 1.4rem
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: url(../IMG/equipement.jpg)
+            background-size: cover
+            filter: grayscale(0%) brightness(0.4) contrast(1.2)
+
+    .box2
+        &::before
+            content: ""
+            position: absolute
+            border-radius: 1.4rem
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: url(../IMG/soleil.jpg)
+            background-size: cover
+            filter: grayscale(0%) brightness(0.4) contrast(1.2)
+
+.parcours
+    height: 500px
+    cursor: pointer
+    transform: scale(0.97)
+    &::before
+        content: ""
+        position: absolute
+        border-radius: 1.4rem
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-image: url(../IMG/vallee-de-la-lune-los-flamencos-chili-260893-1440x670.jpg)
+        background-size: cover
+        filter: grayscale(0%) brightness(0.4) contrast(1.2)
+    &:hover
+        transform: scale(1)
+
+    .box-in
+        position: relative
+        h1
+            font-size: calc( 3rem + 0.5vw )
+            padding-top: calc( 1.6rem + 2vw )
+            padding-left: calc( 1.6rem + 4vw )
+            color: $creme
+            text-transform: uppercase
+        img
+            height: 285px
+            float: right
+            padding-right: calc( 2.2rem + 4vw )
+            padding-bottom: calc( 0.2rem + 2vw )
+
+footer
+    position: relative
+    z-index: 2
+    background: transparentize($logo, 0.1)
+    backdrop-filter: blur(3px)
+    color: $creme
+    text-align: center
+    padding-bottom: 1rem
+    .liens
+        margin: 0 4vw
+        display: flex
+        padding: 1rem
+        justify-content: space-around
+        font-size: 0.6rem
+        span
+            color: $creme
+            cursor: pointer
+            &:hover
+                transform: scale(1.1)
+                letter-spacing: 0.1vw
+    .reseaux
+        display: flex
+        gap: 2rem
+        justify-content: center
+        margin-bottom: 2rem
+        i
+            font-size: 1.4rem
+            color: $creme
+            cursor: pointer
+            &:hover
+                transform: scale(1.3)
+                color: white
+                text-shadow: 0 0 4px white
+    h2
+        color: $creme
+        letter-spacing: 1vw
+        padding: 3rem
+        font-weight: 900
+
