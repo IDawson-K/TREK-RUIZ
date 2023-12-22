@@ -181,7 +181,7 @@ header
             filter: grayscale(0%) brightness(0.4) contrast(1.2)
 
 .parcours
-    height: 500px
+    height: calc( 280px + 14vw )
     cursor: pointer
     transform: scale(0.97)
     &::before
@@ -201,16 +201,185 @@ header
     .box-in
         position: relative
         h1
-            font-size: calc( 3rem + 0.5vw )
+            font-size: calc( 2rem + 0.6vw )
             padding-top: calc( 1.6rem + 2vw )
             padding-left: calc( 1.6rem + 4vw )
             color: $creme
             text-transform: uppercase
         img
-            height: 285px
+            height: calc( 120px + 14vw )
             float: right
-            padding-right: calc( 2.2rem + 4vw )
+            padding-right: calc( 1.8rem + 5vw )
             padding-bottom: calc( 0.2rem + 2vw )
+.conteneurtimeline
+    background: green
+    height: calc( 120px + 8vw )
+    overflow: auto
+    border-radius: 1.4rem
+    transform: scale(0.97)
+    &:hover
+        transform: scale(1)
+    &::-webkit-scrollbar
+        height: 0px
+
+.timeline
+    width: calc( (160px + 10vw ) * 6 )
+    height: 100%
+    cursor: pointer
+    background: $logo
+    display: flex
+    align-items: center
+    gap: 0.8rem
+    padding: 0.8rem
+    .jour
+        width: calc( 160px + 10vw )
+        background: transparentize($creme, 0.8)
+        height: 100%
+        border-radius: 1rem
+        display: flex
+        justify-content: space-evenly
+        flex-direction: column
+        align-items: center
+        padding: 2rem 0
+        .para
+            padding: 0 1rem
+            text-align: center
+            font-size: calc( 0.5rem + 0.6vw )
+        .dec
+            font-size: 0.9rem
+        span
+            font-size: calc( 1rem + 1vw )
+            font-weight: 800
+            color: $creme
+        div
+            font-size: 1rem
+            font-weight: 500
+            color: $creme
+        .dessin
+            overflow: hidden
+            padding: 1rem 0
+            width: 100%
+            height: 60px
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: center
+            .barre
+                position: absolute
+                height: 4px
+                background: $creme
+                width: 100%
+            .point
+                background: $creme
+                position: absolute
+                height: 16px
+                width: 16px
+                border-radius: 999px
+
+.tribox
+    display: flex
+    gap: 10px
+    .box1, .box2, .box3
+        border-radius: 1.2rem
+        background: $input
+        transform: scale(0.935)
+        cursor: pointer
+        padding: 1rem
+        display: flex
+        flex-direction: column
+        flex-grow: 1
+        gap: 1rem
+        &:hover
+            transform: scale(1)
+        .prof
+            display: flex
+            gap: 1rem
+            justify-content: flex-start
+            align-items: center
+            img
+                height: calc( 40px + 3vw )
+                border-radius: 999px
+            div
+                display: flex
+                flex-direction: column
+                .titre
+                    font-weight: 600
+                    opacity: 0.7
+                    letter-spacing: 0.1vw
+                    font-size: calc( 0.5rem + 0.4vw )
+                span
+                    font-weight: 800
+                    letter-spacing: 0.3vw
+                    font-size: calc( 1.2rem + 0.8vw )
+        .publi
+            display: flex
+            gap: 1rem
+            justify-content: space-between
+            align-items: center
+            .text
+                max-width: 340px
+                font-size: calc( 0.6rem + 0.5vw )
+            img
+                width: calc( 80px + 10vw )
+                height: calc( 80px + 3vw )
+                border-radius: 0.7rem
+
+.cta
+    background: $logo
+    color: $creme
+    padding: 0.8rem 1.2rem
+    margin: auto
+    border-radius: 0.8rem
+    border: none
+    cursor: pointer
+    &:hover
+        transform: scale(1.1)
+
+.contact
+    margin-bottom: 1rem
+    cursor: pointer
+    transform: scale(0.97)
+    background: $input
+    border-radius: 1.4rem
+    padding: 1.4rem
+    display: flex
+    gap: 1.4rem
+    .droite
+        width: 50%
+        textarea
+            width: 100%
+            height: 100%
+    .gauche
+        display: flex
+        flex-direction: column
+        width: 50%
+        gap: 1.2rem
+        span
+            font-size: 0.8rem
+    textarea, input
+        background: $creme
+        border: none
+        outline: none
+        padding: 0.8rem
+        border-radius: 0.6rem
+    &:hover
+        transform: scale(1)
+
+.carousel
+    margin-top: 1rem
+    padding: 1.6rem 0
+    img
+        width: 100%
+        margin: 2rem 0
+    h2
+        font-size: calc( 1rem + 2vw )
+        font-weight: 900
+
+.fin
+    background: transparentize($logo, 0.1)
+    height: 18px
+    position: relative
+    z-index: 2
 
 footer
     position: relative
@@ -251,3 +420,6 @@ footer
         padding: 3rem
         font-weight: 900
 
+@media (width < 1000px)
+    .tribox
+        flex-wrap: wrap

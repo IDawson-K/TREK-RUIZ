@@ -207,7 +207,7 @@ header .marquee span {
 }
 
 .parcours {
-  height: 500px;
+  height: calc(280px + 14vw);
   cursor: pointer;
   transform: scale(0.97);
 }
@@ -230,17 +230,223 @@ header .marquee span {
   position: relative;
 }
 .parcours .box-in h1 {
-  font-size: calc(3rem + 0.5vw);
+  font-size: calc(2rem + 0.6vw);
   padding-top: calc(1.6rem + 2vw);
   padding-left: calc(1.6rem + 4vw);
   color: #F9EDEA;
   text-transform: uppercase;
 }
 .parcours .box-in img {
-  height: 285px;
+  height: calc(120px + 14vw);
   float: right;
-  padding-right: calc(2.2rem + 4vw);
+  padding-right: calc(1.8rem + 5vw);
   padding-bottom: calc(0.2rem + 2vw);
+}
+
+.conteneurtimeline {
+  background: green;
+  height: calc(120px + 8vw);
+  overflow: auto;
+  border-radius: 1.4rem;
+  transform: scale(0.97);
+}
+.conteneurtimeline:hover {
+  transform: scale(1);
+}
+.conteneurtimeline::-webkit-scrollbar {
+  height: 0px;
+}
+
+.timeline {
+  width: calc((160px + 10vw) * 6);
+  height: 100%;
+  cursor: pointer;
+  background: #230A02;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem;
+}
+.timeline .jour {
+  width: calc(160px + 10vw);
+  background: rgba(249, 237, 234, 0.2);
+  height: 100%;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+.timeline .jour .para {
+  padding: 0 1rem;
+  text-align: center;
+  font-size: calc(0.5rem + 0.6vw);
+}
+.timeline .jour .dec {
+  font-size: 0.9rem;
+}
+.timeline .jour span {
+  font-size: calc(1rem + 1vw);
+  font-weight: 800;
+  color: #F9EDEA;
+}
+.timeline .jour div {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #F9EDEA;
+}
+.timeline .jour .dessin {
+  overflow: hidden;
+  padding: 1rem 0;
+  width: 100%;
+  height: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.timeline .jour .dessin .barre {
+  position: absolute;
+  height: 4px;
+  background: #F9EDEA;
+  width: 100%;
+}
+.timeline .jour .dessin .point {
+  background: #F9EDEA;
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  border-radius: 999px;
+}
+
+.tribox {
+  display: flex;
+  gap: 10px;
+}
+.tribox .box1, .tribox .box2, .tribox .box3 {
+  border-radius: 1.2rem;
+  background: #E5CFC7;
+  transform: scale(0.935);
+  cursor: pointer;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 1rem;
+}
+.tribox .box1:hover, .tribox .box2:hover, .tribox .box3:hover {
+  transform: scale(1);
+}
+.tribox .box1 .prof, .tribox .box2 .prof, .tribox .box3 .prof {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.tribox .box1 .prof img, .tribox .box2 .prof img, .tribox .box3 .prof img {
+  height: calc(40px + 3vw);
+  border-radius: 999px;
+}
+.tribox .box1 .prof div, .tribox .box2 .prof div, .tribox .box3 .prof div {
+  display: flex;
+  flex-direction: column;
+}
+.tribox .box1 .prof div .titre, .tribox .box2 .prof div .titre, .tribox .box3 .prof div .titre {
+  font-weight: 600;
+  opacity: 0.7;
+  letter-spacing: 0.1vw;
+  font-size: calc(0.5rem + 0.4vw);
+}
+.tribox .box1 .prof div span, .tribox .box2 .prof div span, .tribox .box3 .prof div span {
+  font-weight: 800;
+  letter-spacing: 0.3vw;
+  font-size: calc(1.2rem + 0.8vw);
+}
+.tribox .box1 .publi, .tribox .box2 .publi, .tribox .box3 .publi {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.tribox .box1 .publi .text, .tribox .box2 .publi .text, .tribox .box3 .publi .text {
+  max-width: 340px;
+  font-size: calc(0.6rem + 0.5vw);
+}
+.tribox .box1 .publi img, .tribox .box2 .publi img, .tribox .box3 .publi img {
+  width: calc(80px + 10vw);
+  height: calc(80px + 3vw);
+  border-radius: 0.7rem;
+}
+
+.cta {
+  background: #230A02;
+  color: #F9EDEA;
+  padding: 0.8rem 1.2rem;
+  margin: auto;
+  border-radius: 0.8rem;
+  border: none;
+  cursor: pointer;
+}
+.cta:hover {
+  transform: scale(1.1);
+}
+
+.contact {
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transform: scale(0.97);
+  background: #E5CFC7;
+  border-radius: 1.4rem;
+  padding: 1.4rem;
+  display: flex;
+  gap: 1.4rem;
+}
+.contact .droite {
+  width: 50%;
+}
+.contact .droite textarea {
+  width: 100%;
+  height: 100%;
+}
+.contact .gauche {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 1.2rem;
+}
+.contact .gauche span {
+  font-size: 0.8rem;
+}
+.contact textarea, .contact input {
+  background: #F9EDEA;
+  border: none;
+  outline: none;
+  padding: 0.8rem;
+  border-radius: 0.6rem;
+}
+.contact:hover {
+  transform: scale(1);
+}
+
+.carousel {
+  margin-top: 1rem;
+  padding: 1.6rem 0;
+}
+.carousel img {
+  width: 100%;
+  margin: 2rem 0;
+}
+.carousel h2 {
+  font-size: calc(1rem + 2vw);
+  font-weight: 900;
+}
+
+.fin {
+  background: rgba(35, 10, 2, 0.9);
+  height: 18px;
+  position: relative;
+  z-index: 2;
 }
 
 footer {
@@ -289,4 +495,10 @@ footer h2 {
   letter-spacing: 1vw;
   padding: 3rem;
   font-weight: 900;
+}
+
+@media (width < 1000px) {
+  .tribox {
+    flex-wrap: wrap;
+  }
 }/*# sourceMappingURL=index.css.map */
