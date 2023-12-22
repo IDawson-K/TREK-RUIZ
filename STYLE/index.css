@@ -403,6 +403,7 @@ header .marquee span {
   gap: 1.4rem;
 }
 .contact .droite {
+  flex-grow: 1;
   width: 50%;
 }
 .contact .droite textarea {
@@ -410,6 +411,7 @@ header .marquee span {
   height: 100%;
 }
 .contact .gauche {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -499,6 +501,9 @@ footer h2 {
 
 @media (width < 1000px) {
   .tribox {
+    flex-wrap: wrap;
+  }
+  .contact {
     flex-wrap: wrap;
   }
 }/*# sourceMappingURL=index.css.map */
