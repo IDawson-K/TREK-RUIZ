@@ -474,7 +474,7 @@ footer .liens span {
 }
 footer .liens span:hover {
   transform: scale(1.1);
-  letter-spacing: 0.1vw;
+  letter-spacing: 0.04rem;
 }
 footer .reseaux {
   display: flex;
